@@ -1,18 +1,18 @@
-~/ sudo apt-get update
-~/ sudo apt-get upgrade
+ sudo apt-get update
+ sudo apt-get upgrade
 
-~/ sudo apt-get install -y git-core git cmake libusb-1.0-0-dev build-essential
+sudo apt-get install -y git-core git cmake libusb-1.0-0-dev build-essential
 
-~/ git clone git://git.osmocom.org/rtl-sdr.git
-~/ cd rtl-sdr/
-~/rtl-sdr $ mkdir build
-~/rtl-sdr $ cd build
-~/rtl-sdr/build $ cmake ../ -DINSTALL_UDEV_RULES=ON
-~/rtl-sdr/build $ make
-~/rtl-sdr/build $ sudo make install
-~/rtl-sdr/build $ sudo ldconfig
+git clone git://git.osmocom.org/rtl-sdr.git
+cd rtl-sdr/
+rtl-sdr $ mkdir build
+rtl-sdr $ cd build
+rtl-sdr/build $ cmake ../ -DINSTALL_UDEV_RULES=ON
+rtl-sdr/build $ make
+rtl-sdr/build $ sudo make install
+rtl-sdr/build $ sudo ldconfig
 
-~/sudo nano /etc/modprobe.d/blacklist-rtl.conf
+sudo nano /etc/modprobe.d/blacklist-rtl.conf
 
 ##Copia e incolla:
 
@@ -26,9 +26,9 @@ blacklist rtl2830
 
 ##Salva e Chiudi, Ctrl+O e Ctrl+X
 
-~/sudo reboot
+sudo reboot
 
-~/ rtl_test -t
+ rtl_test -t
 Found 1 device(s):
 0: Realtek, RTL2838UHIDIR, SN: 00000001
 
